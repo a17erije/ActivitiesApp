@@ -32,9 +32,12 @@ public class MainActivity extends AppCompatActivity {
         myListView.setAdapter(adapter);
         myListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
-            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                //Toast.makeText(getApplicationContext(), adapterView.getItemAtPosition(i) + " is " + mountainHeights[i] + " meters tall and its location is: " + mountainLocations[i], Toast.LENGTH_SHORT).show();
+            public void onItemClick(AdapterView<?> adapterView, View view, int position, long l) {
+                //Toast.makeText(getApplicationContext(), adapterView.getItemAtPosition(position) + " is " + mountainHeights[position] + " meters tall and its location is: " + mountainLocations[position], Toast.LENGTH_SHORT).show();
                 Intent myIntent = new Intent(view.getContext(),MountainDetailsActivity.class);
+                myIntent.putExtra("mountainName", mountainNames[position]);
+                myIntent.putExtra("mountainHeight", mountainHeights[position]);
+                myIntent.putExtra("mountainLocation", mountainLocations[position]);
                 startActivityForResult(myIntent,0);
             }
         });
