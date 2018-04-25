@@ -1,3 +1,5 @@
 <resources>
-    <string name="app_name">ActivitiesApp</string>
+    <string name="app_name">a17erije Assignment 3</string>
+    <string name="title_activity_mountain_details">MountainDetailsActivity</string>
+    <string name="placeholderMountain">Mount Shoehorn</string>
 </resources>
